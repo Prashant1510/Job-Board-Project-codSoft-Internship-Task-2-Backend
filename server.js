@@ -15,7 +15,7 @@ dotenv.config();
 const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: '*', credentials: true }));
+app.use(cors({ credentials: true }));
 
 app.use("/api/userauth", userAuthRoutes);
 app.use("/api/companyauth", companyAuthRoutes);
